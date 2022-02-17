@@ -11,6 +11,12 @@
             $('#pop_btn').click(()=>{
                 $('#popup').css({'display':'none'});
             })
+            $('#gnb>li').stop().mouseenter(function(){
+                    $(this).children('.sub').stop().fadeIn(0);
+                })
+            $('#gnb>li').stop().mouseleave(function(){
+                $(this).children('.sub').stop().fadeOut(0);
+            })
         })
     </script>
     <style>
@@ -31,29 +37,37 @@
             text-align: center; line-height: 25px; color: #000;}
         #header2>#logo{width: 193px; height: 36px; float: left; margin-left: 95px; margin-top: 25px;}
         #header2>#gnb{ width: 700px; height: 85px;position: absolute; left: 0; right: 0; top: 0; margin: auto; text-align: center; box-sizing: border-box;}
-        #header2>#gnb>li{display: inline-block; line-height: 45px; color: #fff; font-size:20px; padding: 20px 20px;}
+        #header2>#gnb>li{display: inline-block; line-height: 45px; color: #fff; font-size:20px; padding: 20px 20px; position: relative; cursor: pointer;}
         #header2>button{width: 150px; height: 30px; float: right; background-color: #fff; margin-right: 95px; margin-top: 22px;
         border-radius: 30px; line-height: 30px;
         color: #e1b6a5;
         border: 1px solid #fff;
     font-size: 12px; font-weight: 100;}
     #header2>button>img{width: 14px; height: 12px;}
-    #slide{width: 100%;height: 600px;background: url(images/main_section_1__img.jpg) no-repeat center; position: relative;}
+    #header2>#gnb>li>.sub{width: 500px; height: 320px; background-color: rgba(255, 255, 255, 0.9); position: absolute; z-index: 1; top: 70px;}
+    .sub>ul{float: left; width: 65px; margin-top: 25px; margin-left: 25px; font-size: 14px; color: #aaa; text-align: left; line-height: 25px;}
+    .sub>ul>li:hover{color: #666;}
+    .sub>img{float: right; margin-right: 25px; margin-top: 25px;}
+    .point{position: absolute; width: 3px; height: 3px; border-radius: 5px; background-color: #fff; left: 0; right: 0; top: 25px; margin: auto; display: none;}
+    #header2>#gnb>li:hover>.point{display: block;}
+    #header2>#gnb>li:nth-child(1)>.sub{left: 0px; display: none;}
+    #header2>#gnb>li:nth-child(2)>.sub{display: none;}
+    #header2>#gnb>li:nth-child(5)>.sub{display: none;}
+    #slide{width: 100%;height: 600px;background: url(images/main_section_1__img.jpg) no-repeat center; background-size: cover; position: relative; }
     #slide>#slide_leftbt{top: 0; left: 10px; bottom: 0; margin: auto; position: absolute;}
     #slide>#slide_rightbt{top: 0; bottom: 0; margin: auto;  right: 10px; position: absolute;}
-    #product{width: 1300px; margin: auto; margin-top: 50px; text-align: center;}
-    #product::after{content: ''; clear: both; display: block;}
-    #product_title_h2{color: #fff;}
-    #product_line{width: 30px; height: 2px; background-color: #fff; margin: 30px auto;}
-    #producttitle_p{ color: #fff;}
-    #product>ul{width: 100%; margin: auto;}
-    #product>ul>li{width: 295px; height: 500px; margin: 15px; float: left;}
+    #product{width: 1300px; margin: auto; margin-top: 40px; text-align: center; overflow: hidden;}
+    #product_title_h2{color: #fff; margin-top: 30px; font-size: 34px; font-weight: 700;}
+    #product_line{width: 30px; height: 2px; background-color: #fff; margin: auto; margin-top: 20px;}
+    #producttitle_p{ color: #fff; margin-top: 20px; font-size: 14px; letter-spacing: -1px;}
+    #product>ul{width: 100%; margin: auto; margin-top: 30px;}
+    #product>ul>li{width: 295px; height: 500px; margin: 20px 15px 0px 15px; float: left;}
     #product>ul>li>.product_img{width: 295px; height: 295px; border-radius: 15px;}
     #product>ul>li:nth-child(1)>.product_img{background: url(images/163062700e44641d4d8576110f72afb8.png) center no-repeat; background-size: cover;}
     #product>ul>li:nth-child(1)>.product_img:hover{background: url(images/251158372_172890168375124_8924293115242113081_n.jpg) center no-repeat; background-size: cover;
     }X
     #product>ul>li>h4,h5{color: #fff; margin-top: 20px; font-size: 1.1em;}
-    #product>ul>li>h4{color: #fff;}
+    #product>ul>li>h4{color: #fff; margin-top: 20px; font-size: 18px; font-weight: 900; word-spacing: -4px; line-height: 28px;}
     #product>ul>li>h5{color: #fff;}
     #product>ul>li>h5:after{content: url(icons/custom_316007552077379.png); display: block; margin-top: 10px; }
     #product>ul>li:nth-child(4)>h5::after,
@@ -84,28 +98,29 @@
     #sns_button img:nth-child(2){top: 130px;}
     #small_button{ position: absolute;
     top: 0; right: 0; left: 0 ;margin: auto;}
-    #product2{width: 1300px; height: 500px;  margin: auto; margin-top: 50px;overflow: hidden;}
-    #product2>ul>li{width: 417px; margin: 8px; text-align: center; float: left;}
-    #product2>ul>li>img{width: 100%; border-radius: ;}
-    #product2>ul>li>h4{margin-top: 20px; color: #fff; font-size: 20px; font-weight: 700;}
-    #product2>ul>li>p{color: #fff; margin-top: 10px; font-size: 14px;}
-    #video{width: 1300px; margin: auto; margin-top: 50px; text-align: center; color: #fff;}
-    #video>h3{margin-bottom: 20px; font-size: 30px; font-weight: 400;}
-    #video_line{height: 2px; width: 30px; background-color: #fff; margin: auto; margin-bottom: 20px;}
-    #video>h4{font-size: 14px; margin-bottom: 30px;}
+    #product2{width: 1300px; height: 500px;  margin: auto; margin-top: 0px; overflow: hidden;}
+    #product2>ul>li{width: 33%; margin: 0px; text-align: center; float: left;}
+    #product2>ul>li>img{width: 100%; }
+    #product2>ul>li>h4{margin-top: 20px; color: #fff; font-size: 22px; font-weight: 700;}
+    #product2>ul>li>p{color: #fff; margin-top: 10px; font-size: 14px; letter-spacing: -1px;}
+    #video{width: 1300px; margin: auto; margin-top: 50px; text-align: center; color: #fff; overflow: hidden;}
+    #video>h3{margin-top: 30px; font-size: 36px; font-weight: 400;}
+    #video_line{height: 2px; width: 30px; background-color: #fff; margin: auto; margin-top: 20px;}
+    #video>h4{font-size: 12px; margin-top: 20px; font-weight: 100;}
     #video>p{margin-bottom: 30px;}
-    #story{width: 100%; height: 1570px; background-color: #eddad3; margin-top: 150px; position: relative; text-align: center;} 
-    #story_bgbox{width: 100%; height: 400px; background: url(images/248385724_1293759027727049_8188299941208187686_n.jpg) center no-repeat fixed; background-size: cover;}
-    #story_wrap{width: 1300px; height: 1570px;  right:0; left:0; margin: auto; top: 30px; position: absolute;}
+    #video>iframe{margin-top: 60px;}
+    #story{width: 100%; height: 1570px; background-color: #eddad3; margin-top: 130px; position: relative; text-align: center;} 
+    #story_bgbox{width: 100%; height: 420px; background: url(images/248385724_1293759027727049_8188299941208187686_n.jpg) center no-repeat fixed; background-size: cover;}
+    #story_wrap{width: 1300px; height: 1570px;  right:0; left:0; margin: auto; top: 110px; position: absolute;}
     #story_contnet{width: 1300px; height: 416px;  margin-top: 100px; overflow: hidden;}
     #story_contnet_left{width: 650px; height: 416px; background: url(images/249011193_245872570853749_7928856076459774103_n.jpg); background-size: cover; float: left;}
     #story_contnet_right{width: 650px; height: 416px; background-color: #ffffff; float: right;}
-    #story_title{color: #fff; font-size: 30px; font-weight: 600; margin:40px 0; letter-spacing: 3px;}
-    #story_line{width: 30px; height: 2px; background-color: #fff; margin: auto; }
+    #story_title{color: #fff; font-size: 30px; font-weight: 900; margin:auto; margin-top: 0px; letter-spacing: 3px;}
+    #story_line{width: 30px; height: 2px; background-color: #fff; margin: auto; margin-top: 20px;}
     #story_contnet_right{padding: 50px; box-sizing: border-box;}
-    #story_contnet_right>h3{float: left; margin-bottom: 30px; font-size: 35px; font-weight: 400;}
-    #story_contnet_right>h4{float: left;font-size: 16px;  margin-bottom: 40px; text-align: left; font-weight: 400; line-height: 1.5;}
-    #story_contnet_right>button{ padding: 15px 25px; background-color: #fff;  border: 1.5px solid #aaa; float: left; font-size: 16px; font-weight: 700;} 
+    #story_contnet_right>h3{float: left; margin-top: 10px; font-size: 35px; font-weight: 400;}
+    #story_contnet_right>h4{float: left;font-size: 16px;  margin-top: 30px; text-align: left; font-weight: 400; line-height: 30px; letter-spacing: -1px;}
+    #story_contnet_right>button{ padding: 10px 30px; margin-top: 35px; word-spacing: -1px; background-color: #fff;  border: 1.5px solid #ccc; float: left; font-size: 16px; font-weight: 700;} 
     #magazine_title{font-size: 40px; font-weight: 100; margin-top: 100px;}
     #magazine_line{width: 30px; height: 2px; background-color: #000; margin: auto; margin-top: 30px;}
     #magazine>ul{overflow: hidden;}
@@ -114,7 +129,7 @@
     #magazine>ul>li:nth-child(2){background: url(images/346f26381477a3ba5c96c246cd5a4df3.jpg) center no-repeat; background-size: cover;}
     #magazine>ul>li:nth-child(3){background: url(images/0431b367c6c9ffc210e6c08ff2729ac8.jpg) center no-repeat; background-size: cover;}
     #magazine>ul>li:nth-child(4){background: url(images/bffc3c880a22935dd37d26107816b4d1.jpg) center no-repeat; background-size: cover;}
-    #popup{width: 450px; height: 477px; position: absolute; left: 55px; top: 50px; z-index: 999; cursor: default;}
+    #popup{width: 450px; height: 477px; position: absolute; left: 55px; top: 50px; z-index: 999; cursor: default; display: none;}
     #popup>img{width: 100%; vertical-align: top;}
     #popup_text{height: 25px; line-height: 25px; font-size: 12px; text-align: right; background-color: #96735d; color: #fff;}
     </style>
@@ -138,28 +153,79 @@
         <div id="header2">
             <h1 id="logo"><img src="logo_1.png" alt=""></h1>
             <ul id="gnb">
-                <li>shop</li>
-                <li>community</li>
-                <li>review</li>
-                <li>event</li>
-                <li>brand</li>
+                <li>
+                    <div class="point">
+
+                    </div>
+                    shop
+                    <div class="sub">
+                        <ul>
+                            <li>best</li>
+                            <li>cleanser</li>
+                            <li>skingcare</li>
+                            <li>special kit</li>
+                            <li>goods</li>
+                        </ul>
+                        <img src="images/category_item_img_1.jpg" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="point">
+                        
+                </div>
+                    community
+                    <div class="sub">
+                        <ul>
+                            <li>membership</li>
+                            <li>Q&A</li>
+                            <li>FAQ</li>
+                        </ul>
+                        <img src="images/community_img.jpg" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="point">
+                        
+                    </div>
+                    review</li>
+                <li>
+                    <div class="point">
+                        
+                    </div>
+                    event</li>
+                <li>
+                    <div class="point">
+                        
+                    </div>
+                    brand
+                    <div class="sub">
+                        <ul>
+                            <li>story</li>
+                            <li>magazine</li>
+                            <li>news</li>
+                        </ul>
+                        <img src="images/brand_img.jpg" alt="">
+                    </div>
+                </li>
             </ul>
             <button> 10% OFF COUPON <img src="icons/download_icon.jpg" alt=""></button>
         </div>
     </header>
-    <div id="slide"><img src="icons/slider_2_prev_btn.png" alt="" id="slide_leftbt"><img src="icons/slider_2_next_btn.png" alt="" id="slide_rightbt"></div>
+    <div id="slide">
+        <img src="icons/slider_2_prev_btn.png" alt="" id="slide_leftbt">
+        <img src="icons/slider_2_next_btn.png" alt="" id="slide_rightbt"></div>
     <div id="product">
         <h2 id="product_title_h2">product</h2>
         <div id="product_line"></div>
-        <p id="producttitle_p">독자적인 비건 프로바이오틱스 처방으로 <br> 더욱 건강한 glowoasis의 비건 스킨케어 라인을 만나보세요.</p>
+        <p id="producttitle_p">독자적인 비건 프로바이오틱스 처방으로 더욱 건강한  <br> glowoasis의 비건 스킨케어 라인을 만나보세요.</p>
         <ul>
             <li><div class="product_img"></div>
-            <h4>프로바이오틱스 플러스 무루무루 퐁당립밤</h4>
+            <h4>프로바이오틱스 플러스 무루무루 퐁당립밤 (택 1)</h4>
             <h5><span>12,900원</span>  12,900원</h5>
             <img src="" alt="" class="product_new"></li>
             <li>
                 <div id="small_button">
-                <img src="icons/button_other_03.png" alt=""><img src="icons/button_other_01.png" alt=""><img src="icons/button_other_02.png" alt=""><img src="icons/button_other_04.png" alt="">
+                <!-- <img src="icons/button_other_03.png" alt=""><img src="icons/button_other_01.png" alt=""><img src="icons/button_other_02.png" alt=""><img src="icons/button_other_04.png" alt=""> -->
                 </div><div class="product_img"></div>
                 <h4>프로바이오틱스 플러스 무루무루 울트라 카밍 토너</h4>
                 <h5>32,000원</h5>
