@@ -121,14 +121,19 @@
     #story_contnet_right>h3{float: left; margin-top: 10px; font-size: 35px; font-weight: 400;}
     #story_contnet_right>h4{float: left;font-size: 16px;  margin-top: 30px; text-align: left; font-weight: 400; line-height: 30px; letter-spacing: -1px;}
     #story_contnet_right>button{ padding: 10px 30px; margin-top: 35px; word-spacing: -1px; background-color: #fff;  border: 1.5px solid #ccc; float: left; font-size: 16px; font-weight: 700;} 
-    #magazine_title{font-size: 40px; font-weight: 100; margin-top: 100px;}
-    #magazine_line{width: 30px; height: 2px; background-color: #000; margin: auto; margin-top: 30px;}
-    #magazine>ul{overflow: hidden;}
-    #magazine>ul>li{width: 25%; height: 350px; float: left; border: 1px solid #000; box-sizing: border-box;}
-    #magazine>ul>li:nth-child(1){ background: url(images/e27f734d542ee4f26f4881569043ff2e.jpg) center no-repeat; background-size: cover;}
-    #magazine>ul>li:nth-child(2){background: url(images/346f26381477a3ba5c96c246cd5a4df3.jpg) center no-repeat; background-size: cover;}
-    #magazine>ul>li:nth-child(3){background: url(images/0431b367c6c9ffc210e6c08ff2729ac8.jpg) center no-repeat; background-size: cover;}
-    #magazine>ul>li:nth-child(4){background: url(images/bffc3c880a22935dd37d26107816b4d1.jpg) center no-repeat; background-size: cover;}
+    #magazine_title{font-size: 40px; font-weight: 400; margin-top: 110px;}
+    #magazine_line{width: 30px; height: 2px; background-color: #000; margin: auto; margin-top: 20px;}
+    #magazine>ul{overflow: hidden; margin-top: 30px;}
+    #magazine>ul>li{width: 25%; float: left; box-sizing: border-box; background: #fff;}
+    #magazine>ul>li>div>h3{font-weight: 400;}
+    #magazine>ul>li>div{padding: 30px;}
+    #magazine>ul>li>div>p{font-size: 12px; color: #aaa; margin-top: 10px;}
+    #magazine>ul>li>img{width: 100%;}
+    #magazine>button{font-size: 16px; padding: 10px 30px; margin-top: 50px; border: none; background-color: #fff; }
+    #instargram{width: 100%; height: 520px; background: #e1b6a5;}
+    #instargram_box{width: 1300px; height: 100%; border: 1px solid #000; margin: auto; text-align: center; color: #fff;}
+    #instargram_box>h3{margin-top: 100px;  display: inline-block; background: #e1b6a5; padding: 10px;}
+    #instargram_line{width: 600px; height: 1px; background-color: #fff; margin: auto; margin-top: -25px;}
     #popup{width: 450px; height: 477px; position: absolute; left: 55px; top: 50px; z-index: 999; cursor: default; display: none;}
     #popup>img{width: 100%; vertical-align: top;}
     #popup_text{height: 25px; line-height: 25px; font-size: 12px; text-align: right; background-color: #96735d; color: #fff;}
@@ -293,27 +298,43 @@
                 <div id="magazine_line"></div>
                 <ul>
                     <li>
-                        <img src="" alt="">
-                        <h5>1</h5>
-                        <p></p>
+                        <img src="images/e27f734d542ee4f26f4881569043ff2e.jpg" alt="">
+                        <div><h3>Our Hero! vegan probiotcis</h3>
+                            <p>우리의 피부 고민을 해결해줄 히어로! 글로오아시스의 <br> 비건 프로바이오틱스를 소개합니다.</p></div>                 
                     </li>
                     <li>
-                        <img src="" alt="">
-                        <h5></h5>
-                        <p></p>
+                        <img src="images/346f26381477a3ba5c96c246cd5a4df3.jpg" alt="">
+                        <div> <h3>what is Microbiome?</h3>
+                            <p>화장품 업계에서 가장 뜨겁게 떠오른 키워드 '마이크로 <br> 바이옴'!도대체 뭐길래 이렇게 다들 집중하는 것일까</p></div>              
                     </li>
-                    <li><img src="" alt="">
-                        <h5></h5>
-                        <p></p>
+                    <li><img src="images/0431b367c6c9ffc210e6c08ff2729ac8.jpg" alt="">
+                        <div><h3>our no-no!</h3>
+                        <p>얼굴에 닿는 화장품,아무 제품이나 사용할 수 없죠. 글<br>로오아시스에서는 까다롭게 no-no list를 관리해요.</p></div>
+                        
                     </li>
-                    <li><img src="" alt="">
-                        <h5></h5>
-                        <p></p>
+                    <li><img src="images/bffc3c880a22935dd37d26107816b4d1.jpg" alt="">
+                        <div><h3>our vegan alternatives</h3>
+                            <p>우리가 매일 아침,저녁으로 사용하는 스킨케어 제품에 <br> 동물성 원료가 들어있을 수 있다는 사실을 알고 계시나</p></div>
+                        
                     </li>
                 </ul>
                 <button>게시물 더보기</button>
                 <!-- #magazine>ul>li{w25% bd bxz:bb fl:l} -->
             </div>
+        </div>
+    </div>
+    <div id="instargram">
+        <div id="instargram_box">
+            <h3><img src="" alt=""> INSTARGRAM</h3>
+            <div id="instargram_line"></div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
     </div>
     <div id="popup">
