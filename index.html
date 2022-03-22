@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="style.css">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>글로오아시스</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(()=>{
@@ -18,6 +19,12 @@
             $('#gnb>li').stop().mouseleave(function(){
                 $(this).children('.sub').stop().fadeOut(0);
             })
+            let num = 0;
+            setInterval(function(){
+            num = num - 200;
+            if(num < -800){num = 0;}
+            $('#instargram_slide').stop().animate({'left':num+'px'})
+            },3000)
         })
     </script>
 </head>
@@ -207,16 +214,22 @@
     </div>
     <div id="instargram">
         <div id="instargram_box">
-            <h3><img src="" alt=""> INSTARGRAM</h3>
-            <div id="instargram_line"></div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <div id="instargram_title"><h3><img src="icons/instar_icon.jpg" alt=""> INSTARGRAM</h3>
+                <div id="instargram_line"></div></div>
+            <div id="instargram_slide_box">
+                <ul id="instargram_slide">
+                <li><img src="images/0431b367c6c9ffc210e6c08ff2729ac8.jpg" alt=""></li>
+                <li><img src="images/163062700e44641d4d8576110f72afb8.png" alt=""></li>
+                <li><img src="images/217495315_250028269923374_2292929755670106970_n.jpg" alt=""></li>
+                <li><img src="images/217599810_967555594041582_2318427496553834444_n.jpg" alt=""></li>
+                <li><img src="images/214363421_172140914901838_4727564650434600481_n.jpg" alt=""></li>
+                <li><img src="images/221956181_1444403119275827_554767727197343287_n.jpg" alt=""></li>
+                <li><img src="images/219390262_3086591681601000_4810737247097658839_n.jpg" alt=""></li>
+                <li><img src="images/219569197_2734740586819432_6886096580428677206_n.jpg" alt=""></li>
+                <li><img src="images/211898352_942031996347362_5181284587706720201_n.jpg" alt=""></li>
+                <li><img src="images/219854470_278420314042007_1453578999479248486_n.jpg" alt=""></li>
+            </ul></div>
+            
         </div>
     </div>
     <div id="popup">
@@ -225,5 +238,19 @@
             오늘하루 열지 않음<input type="checkbox">
             <span id="pop_btn">닫기x</span></div>
     </div>
+    <footer>
+        <div id="footer_top">
+            <div id="footer_top_box">
+                <ul>
+                    <li>C/S</li>
+                    <li>COMPANY</li>
+                    <li>BANK</li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer_bottom">
+            <div id="footer_bottom_box"></div>
+        </div>
+    </footer>
 </body>
 </html>
